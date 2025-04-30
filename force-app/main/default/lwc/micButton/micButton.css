@@ -1,0 +1,41 @@
+.mic-button-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.mic-button {
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  background-color: #0070d2;
+}
+
+.voice-textarea-container {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  z-index: 9999;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+}
+
+.voice-textarea {
+  height: 5rem; /* 3–4 lines of text */
+  resize: none;
+}
+
+.send-button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+}
+
+.send-button {
+  padding: 0.5rem 1rem;
+}

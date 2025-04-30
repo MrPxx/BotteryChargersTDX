@@ -1,0 +1,14 @@
+{
+  "required" : [ "specialist" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "specialist" : {
+      "title" : "specialist",
+      "description" : "Pass the specialist as input parameter. For example, if the patient is complaining of respiratory problems, pass \"Pulmonologist\" as parameter and so on",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

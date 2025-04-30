@@ -1,0 +1,35 @@
+{
+  "required" : [ "contactNumber", "emailAddress", "firstName", "lastName" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "contactNumber" : {
+      "title" : "contactNumber",
+      "description" : "Contact Number of the patient for registration",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "emailAddress" : {
+      "title" : "emailAddress",
+      "description" : "Email Address of the patient for registration",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "firstName" : {
+      "title" : "firstName",
+      "description" : "First name of the patient for registration",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "lastName" : {
+      "title" : "lastName",
+      "description" : "Last Name of the patient for registration",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

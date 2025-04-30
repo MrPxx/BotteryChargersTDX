@@ -1,0 +1,25 @@
+<template>
+    <nav class="nav-bar">
+        <!-- Desktop Nav -->
+        <div class="nav-container" if:false={isMobileView} lwc:dom="manual" data-container></div>
+
+        <!-- Mobile Nav -->
+        <div class="mobile-nav" if:true={isMobileView}>
+            <div class="mobile-header">
+                <a href="#" data-id={firstItem.id} onclick={handleClick} class="nav-item">{firstItem.label}</a>
+                <button class="hamburger" onclick={toggleMobileMenu}>☰</button>
+            </div>
+            <div class="mobile-menu" if:true={mobileMenuOpen}>
+                <template for:each={remainingMobileItems} for:item="item">
+                    <a key={item.id}
+                       href="#"
+                       data-id={item.id}
+                       onclick={handleClick}
+                       class="nav-item"
+                       
+                    >{item.label}</a>
+                </template>
+            </div>
+        </div>
+    </nav>
+</template>

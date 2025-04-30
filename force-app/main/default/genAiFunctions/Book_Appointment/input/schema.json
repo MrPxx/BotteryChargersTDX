@@ -1,0 +1,28 @@
+{
+  "required" : [ "appointmentDateAndTime", "contactId", "specialistId" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "appointmentDateAndTime" : {
+      "title" : "appointmentDateAndTime",
+      "description" : "Get the preferred date and time from the patient",
+      "lightning:type" : "lightning__dateTimeStringType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "contactId" : {
+      "title" : "contactId",
+      "description" : "Get the patient id from either \"Get Patient Details\" action or \"Register Patient Details\" action",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "specialistId" : {
+      "title" : "specialistId",
+      "description" : "Get the specialist id from the Appointments record collection variable from the \"Get Appointment Dates\" action",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

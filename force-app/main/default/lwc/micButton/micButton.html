@@ -1,0 +1,32 @@
+<template>
+  <div class="mic-button-container">
+    <lightning-button-icon
+      icon-name="utility:unmuted"
+      alternative-text="Start Voice Input"
+      variant="brand"
+      onclick={handleMicClick}
+      title="Speak Now"
+      class="mic-button">
+    </lightning-button-icon>
+  </div>
+
+  <template if:true={showTextarea}>
+    <div class="voice-textarea-container">
+      <lightning-textarea
+        name="voiceInput"
+        label="Voice Input"
+        value={recognizedText}
+        onchange={handleTextChange}
+        class="voice-textarea">
+      </lightning-textarea>
+
+      <div class="send-button-container">
+        <lightning-button
+          label="Send"
+          onclick={handleSendButtonClick}
+          class="send-button">
+        </lightning-button>
+      </div>
+    </div>
+  </template>
+</template>

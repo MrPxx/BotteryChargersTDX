@@ -1,0 +1,60 @@
+.page-one {
+    padding: 2rem;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.welcome-section {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    width: 100%;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    padding: 0 1rem;
+    transition: transform 0.3s ease;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* Desktop: Show 2 items */
+@media screen and (min-width: 769px) {
+    .carousel-item {
+        flex: 0 0 50%;
+    }
+}
+
+/* Navigation Buttons */
+.nav-btn {
+    background-color: #0070d2;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    z-index: 1;
+    margin: 0 0.5rem;
+}
+
+.nav-btn:hover {
+    background-color: #005fb2;
+}

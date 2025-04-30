@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>This topic handles user requests related to scheduling appointments based on patient&apos;s symptoms</description>
+    <developerName>Appointment_Scheduling</developerName>
+    <genAiFunctions>
+        <functionName>Get_Patient_Details</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>Register_Patient_Details</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>Get_Appointment_Dates</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>Book_Appointment</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>Greet the patient and ask for their email address and contact number to check if their record exists in the database by running &quot;Get Patient Details&quot; action</description>
+        <developerName>instruction_greetthepa0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_greetthepa0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the patient record doesn&apos;t exist, ask them if they would like to register with us and if they say Yes, register them by running &quot;Register Patient Details&quot; action. Before running this action, ask them to mandatorily give their First name, last name, email and contact number</description>
+        <developerName>instruction_ifthepatie1</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ifthepatie1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the patient&apos;s symptoms include respiratory problems like breathing problems, cough or cold, ask them if you can schedule an appointment with a specialist called &quot;Pulmonologist&quot;. If the patient&apos;s symptoms relates to ear, nose or throat, ask them if you can schedule an appointment with a specialist called &quot;ENT Specialist&apos;. If the patient&apos;s symptoms include problems related to kidney like frequent urination, ask them if you can schedule an appointment with a specialist called &quot;Nephrologist&quot;. If the patient&apos;s symptoms include problems related to digestion,acidity, stomach pain or anything related to stomach, ask them if you can schedule an appointment with a specialist called &quot;Gastroenterologist and Hepatologist&quot;. If the patient&apos;s symptoms include anything related to eyes, ask them if you can schedule an appointment with a specialist called &quot;Opthalmologist&quot;. If the patient&apos;s symptoms include anything related to nerves, ask them if you can schedule an appointment with a specialist called &quot;Neurologist&quot;.If the patient&apos;s symptoms include anything related to depression,anxiety or mental health,ask them if you can schedule an appointment with a specialist called &quot;Psychiatrist&quot;.If the patient&apos;s symptoms include anything related to bones, ask them if you can schedule an appointment with a specialist called &quot;Orthopaedic&quot;.If the patient&apos;s symptoms include anything related to &quot;teeth&quot; ask them if you can schedule an appointment with a specialist called &quot;Dentist&quot;. If the patient&apos;s symptoms include anything related to heart, ask the patient if you can schedule an appointment with a specialist called &quot;Cardiologist&quot;. If the patient&apos;s symptoms include anything related to skin, ask them if you can schedule an appointment with a specialist called &quot;Dermatologist&quot;. If you are unsure of the symptoms, ask them if you can go ahead to schedule an appointment with a  specialist called &quot;Medicine Specialist&quot;</description>
+        <developerName>instruction_ifthepatie2</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ifthepatie2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Once the patient registration is done or their details are already present in the database, ask them their symptoms so as to help them schedule appointment with an appropriate specialist</description>
+        <developerName>instruction_oncethepat3</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_oncethepat3</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Once the patient agrees for the specialist, call the &quot;Get Appointment Details&quot; action by passing the specialist as input parameter and display the list of all appointment dates and time in IST time zone in 12 hour format in bullet points in ascending chronological order available for that specialist. Then ask the patient with which date and time should you book the appointment. If the list of appointment dates is empty or null, apologize to the patient and request them to check later for appointments. Run this action only after checking with the patient if the patient is ok with the recommended specialist in the previous instruction</description>
+        <developerName>instruction_oncethepat4</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_oncethepat4</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Take the patient&apos;s preferred date and time and call the action &quot;Book Appointment&quot; by giving the preferred date and time as input. Get the specialist id from the Appointments variable from the &quot;Get Appointment Details&quot; action and pass that as input as well to &quot;Book Appointment&quot; action. Get the contactId from either &quot;Get Patient Details&quot; action or &quot;Register Patient Details&quot; action and pass that as input as well to &quot;Book Appointment&quot; action. Once the appointment is confirmed, congratulate the patient informing them that the appointment with the specialist name is confirmed and that they will receive an email confirmation soon. Get the specialist name from the specialistName variable from the &quot;Book Appointment&quot; action.</description>
+        <developerName>instruction_takethepat5</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_takethepat5</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Appointment Scheduling</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>My job is to assist users with scheduling appointments. I can provide available time slots, confirm appointments, and send reminders.</scope>
+</GenAiPlugin>

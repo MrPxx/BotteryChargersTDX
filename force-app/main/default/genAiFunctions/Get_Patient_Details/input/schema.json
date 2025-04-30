@@ -1,0 +1,21 @@
+{
+  "required" : [ "contactNumber", "emailAddress" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "contactNumber" : {
+      "title" : "contactNumber",
+      "description" : "Contact Number of the patient used to identify patient's identity",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    },
+    "emailAddress" : {
+      "title" : "emailAddress",
+      "description" : "The email address used to verify patient's identity",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

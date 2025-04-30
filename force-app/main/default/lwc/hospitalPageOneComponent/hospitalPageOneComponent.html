@@ -1,0 +1,24 @@
+<template>
+    <div class="page-one">
+        <section class="welcome-section">
+            <h2>Welcome to InfinityCare Hospital.</h2>
+            <h3>Committed to your health and well-being</h3>
+            <p>Your health is our mission. Discover our world-class facilities below.</p>
+        </section>
+
+        <section class="carousel-wrapper">
+            <!-- Carousel Controls (Desktop Only) -->
+            <button class="nav-btn prev-btn" onclick={handlePrev}>‹</button>
+
+            <div class="carousel" ontouchstart={handleTouchStart} ontouchend={handleTouchEnd}>
+                <template for:each={visibleImages} for:item="img">
+                    <div key={img} class="carousel-item">
+                        <img src={img} alt="Hospital Facility" />
+                    </div>
+                </template>
+            </div>
+
+            <button class="nav-btn next-btn" onclick={handleNext}>›</button>
+        </section>
+    </div>
+</template>

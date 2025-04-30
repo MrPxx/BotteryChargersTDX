@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Call the &quot;Get Appointment Dates&quot; action by passing the specialist as input parameter</description>
+    <invocationTarget>Get_Appointment_Dates</invocationTarget>
+    <invocationTargetType>flow</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
+    <masterLabel>Get Appointment Dates</masterLabel>
+</GenAiFunction>
